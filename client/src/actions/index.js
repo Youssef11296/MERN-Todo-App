@@ -31,3 +31,31 @@ export const deleteTodo = (id) => async(dispatch) => {
         console.log(`Error: ${error.message}`);
     }
 };
+
+// Update todo
+export const updateTodo = (id, updatedTodo) => async(dispatch) => {
+    try {
+        const { data } = await api.updateTodo(id, updatedTodo);
+        dispatch({ type: actionTypes.UPDATE_TODO, payload: data });
+    } catch (error) {
+        console.log(`Error: ${error.message}`);
+    }
+};
+
+// Get current todo id
+export const getCurrentTodoId = (id) => (dispatch) => {
+    try {
+        dispatch({ type: actionTypes.GET_CURRENT_ID, payload: id });
+    } catch (error) {
+        console.log("Some error occured");
+    }
+};
+
+// Set current id to null
+export const setCurrentId = () => (dispatch) => {
+    try {
+        dispatch({ type: actionTypes.SET_CURRENT_ID, payload: null });
+    } catch (error) {
+        console.log("Some error occured");
+    }
+};

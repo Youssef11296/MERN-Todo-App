@@ -11,3 +11,7 @@ export const addTodo = (todo) => axios.post(`${url}/create`, todo);
 
 // Delete todo
 export const deleteTodo = (id) => axios.delete(`${url}/${id}`);
+
+// Update todo
+export const updateTodo = (id, updatedTodo) =>
+    axios.patch(`${url}/${id}`, updatedTodo);

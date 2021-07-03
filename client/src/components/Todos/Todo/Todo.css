@@ -9,6 +9,13 @@
     background-color: whitesmoke;
 }
 
+.todo__btns {
+    display: flex;
+    flex: 0.3;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .todo__delBtn {
     color: #fff;
     border: none;
@@ -18,4 +25,5 @@
     font-size: 1rem;
     background: rgb(172, 10, 10);
     cursor: pointer;
+    margin-left: 0.5rem;
 }

@@ -3,5 +3,19 @@
     padding: 10px;
     border-radius: 5px;
     margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: whitesmoke;
+}
+
+.todo__delBtn {
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: rgb(172, 10, 10);
+    cursor: pointer;
 }

@@ -1,6 +1,7 @@
 // Hooks
 import { useEffect } from "react";
 // Components
+import Form from "./components/Form/Form";
 import Todos from "./components/Todos/Todos";
 // Redux
 import { useDispatch } from "react-redux";
@@ -16,6 +17,7 @@ function App() {
   }, [dispatch]);
   return (
     <div className="app">
+      <Form />
       <Todos />
     </div>
   );

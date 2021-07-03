@@ -1,7 +1,7 @@
 .todos__container {
     width: 80%;
-    height: 60%;
-    max-height: 60%;
+    height: 85%;
+    max-height: 85%;
     padding: 1rem;
     margin: auto;
     display: flex;
@@ -9,5 +9,7 @@
     justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.2);
 }

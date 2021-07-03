@@ -4,7 +4,7 @@ const todoSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        minlength: 6,
+        minlength: 3,
     },
 }, { timestamps: true });
 

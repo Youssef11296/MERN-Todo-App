@@ -1,6 +1,8 @@
 // Hooks
 import { useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Components
+import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import Todos from "./components/Todos/Todos";
 // Redux
@@ -16,10 +18,19 @@ function App() {
     dispatch(fetchTodos());
   }, [dispatch]);
   return (
-    <div className="app">
-      <Form />
-      <Todos />
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <Switch>
+          <div className="app__container">
+            <Route path="/">
+              <Form />
+              <Todos />
+            </Route>
+          </div>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

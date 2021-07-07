@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import Todos from "./components/Todos/Todos";
+import About from "./components/About/About";
 // Redux
 import { useDispatch } from "react-redux";
 import { fetchTodos } from "./actions";
@@ -23,9 +24,12 @@ function App() {
         <Header />
         <Switch>
           <div className="app__container">
-            <Route path="/">
+            <Route exact path="/">
               <Form />
               <Todos />
+            </Route>
+            <Route path="/about">
+              <About />
             </Route>
           </div>
         </Switch>

@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 // Todo model
 const Todo = require("../models/todo");
-
+const User = require("../models/user");
 // Get all todos
 const getAllTodos = async(req, res) => {
     try {
@@ -57,5 +57,16 @@ const updateTodo = async(req, res) => {
         res.json({ message: error.message });
     }
 };
+
+// Get user data
+const getUserData = async(req, res) => {
+    try {
+        const user = await User.find();
+        res.status(200).json(user);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+};
+
 // Export all controllers
-module.exports = { getAllTodos, addTodo, deleteTodo, updateTodo };
+module.exports = { getAllTodos, addTodo, deleteTodo, updateTodo, getUserData };

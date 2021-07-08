@@ -9,6 +9,7 @@
     left: 0;
     padding: 1rem;
     height: 10vh;
+    z-index: 2;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -43,4 +44,13 @@
     color: #fff;
     font-size: 1.2rem;
     text-decoration: none;
+}
+
+
+/* Header responsive */
+
+@media screen and (max-width: 768px) {
+    .header__right {
+        width: 230px;
+    }
 }

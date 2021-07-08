@@ -18,11 +18,13 @@ const app = express();
 
 // App routers
 const todosRouter = require("./routers/todos");
+const userRouter = require("./routers/user");
 
 // App middlewares
 app.use(express.json());
 app.use(cors());
 app.use("/todos", todosRouter);
+app.use("/user", userRouter);
 
 // App configuration
 const port = process.env.PORT || 5000;

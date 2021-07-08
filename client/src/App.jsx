@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Components
+import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import Todos from "./components/Todos/Todos";
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/login">
+              <Login />
             </Route>
           </div>
         </Switch>
